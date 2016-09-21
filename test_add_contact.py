@@ -27,7 +27,6 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def creating_contact(self, wd):
-        # add contacts
         wd.find_element_by_link_text("Додати контакт").click()
         wd.find_element_by_xpath("//div[@id='content']/form/input[1]").click()
         wd.find_element_by_name("firstname").click()
@@ -42,7 +41,6 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("submit").click()
 
     def logout(self, success, wd):
-        # logout
         wd.find_element_by_link_text("Вийти").click()
         self.assertTrue(success)
 
